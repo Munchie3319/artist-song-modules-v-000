@@ -6,34 +6,34 @@ class Artist
 
   @@artist = [ ]
 
-  def self.find_by_name(name)		
-     @@artists.detect{|a| a.name == name}		
-   end		
+  def self.find_by_name(name)
+     @@artists.detect{|a| a.name == name}
+   end
 
    def initialize
-     @@artist << self 
+     @@artist << self
      @song =[]
    end
 
-   def self.all 
-     @@artists 
+   def self.all
+     @@artists
    end
 
-   def self.reset_all		
-     self.all.clear		
-   end		
+   def self.reset_all
+     self.all.clear
+   end
 
-    def self.count		
-     @@artists.count		
-   end		
+    def self.count
+     @@artists.count
+   end
 
    def add_song(song)
      @songs << song
-     song.artist = self 
+     song.artist = self
      songs.each { |song| add_song(song) }
    end
 
-   def to_param		
-     name.downcase.gsub(' ', '-')		
-   end		
+   def to_param
+     name.downcase.gsub(' ', '-')
+   end
 end
