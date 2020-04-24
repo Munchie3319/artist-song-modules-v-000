@@ -16,7 +16,7 @@ class Artist
    end
 
    def self.all
-     @@artists
+     @@artist
    end
 
    def self.reset_all
