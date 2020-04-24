@@ -11,12 +11,12 @@ class Artist
    end
 
    def initialize
-     @@artist << self
-     @song =[]
+     @@artists << self
+     @songs =[]
    end
 
    def self.all
-     @@artist
+     @@artists
    end
 
    def self.reset_all
@@ -28,8 +28,11 @@ class Artist
    end
 
    def add_song(song)
-     @song << song
+     @songs << song
      song.artist = self
+   end
+
+   def add_songs(songs)
      songs.each { |song| add_song(song) }
    end
 
