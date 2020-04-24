@@ -33,3 +33,4 @@ require 'pry'
    def self.all
      @@songs
    end
+ end
